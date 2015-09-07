@@ -1,0 +1,14 @@
+doctype html
+html(lang='en')
+	head
+		// Meta, title, CSS, favicons, etc.
+		| {% include header.html %}
+	body.bs-docs-home
+		a#skippy.sr-only.sr-only-focusable(href='#content')
+			.container
+				span.skiplink-text Skip to main content
+		// Docs master nav
+		| {% include nav/main.html %}
+		// Page content of course!
+		| {{ content }}
+		| {% include footer.html %}

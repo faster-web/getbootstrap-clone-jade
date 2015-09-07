@@ -1,0 +1,558 @@
+.bs-docs-section
+	h1#type.page-header Typography
+	// Headings
+	h2#type-headings Headings
+	p
+		| All HTML headings, 
+		code <h1>
+		|  through 
+		code <h6>
+		| , are available. 
+		code .h1
+		|  through 
+		code .h6
+		|  classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.
+	.bs-example.bs-example-type(data-example-id='simple-headings')
+		table.table
+			tbody
+				tr
+					td
+						h1 h1. Bootstrap heading
+					td.type-info Semibold 36px
+				tr
+					td
+						h2 h2. Bootstrap heading
+					td.type-info Semibold 30px
+				tr
+					td
+						h3 h3. Bootstrap heading
+					td.type-info Semibold 24px
+				tr
+					td
+						h4 h4. Bootstrap heading
+					td.type-info Semibold 18px
+				tr
+					td
+						h5 h5. Bootstrap heading
+					td.type-info Semibold 14px
+				tr
+					td
+						h6 h6. Bootstrap heading
+					td.type-info Semibold 12px
+	| {% highlight html %}
+	h1 h1. Bootstrap heading
+	h2 h2. Bootstrap heading
+	h3 h3. Bootstrap heading
+	h4 h4. Bootstrap heading
+	h5 h5. Bootstrap heading
+	h6 h6. Bootstrap heading
+	| {% endhighlight %}
+	p
+		| Create lighter, secondary text in any heading with a generic 
+		code <small>
+		|  tag or the 
+		code .small
+		|  class.
+	.bs-example.bs-example-type(data-example-id='small-headings')
+		table.table
+			tbody
+				tr
+					td
+						h1
+							| h1. Bootstrap heading 
+							small Secondary text
+				tr
+					td
+						h2
+							| h2. Bootstrap heading 
+							small Secondary text
+				tr
+					td
+						h3
+							| h3. Bootstrap heading 
+							small Secondary text
+				tr
+					td
+						h4
+							| h4. Bootstrap heading 
+							small Secondary text
+				tr
+					td
+						h5
+							| h5. Bootstrap heading 
+							small Secondary text
+				tr
+					td
+						h6
+							| h6. Bootstrap heading 
+							small Secondary text
+	| {% highlight html %}
+	h1
+		| h1. Bootstrap heading 
+		small Secondary text
+	h2
+		| h2. Bootstrap heading 
+		small Secondary text
+	h3
+		| h3. Bootstrap heading 
+		small Secondary text
+	h4
+		| h4. Bootstrap heading 
+		small Secondary text
+	h5
+		| h5. Bootstrap heading 
+		small Secondary text
+	h6
+		| h6. Bootstrap heading 
+		small Secondary text
+	| {% endhighlight %}
+	// Body copy
+	h2#type-body-copy Body copy
+	p
+		| Bootstrap's global default 
+		code font-size
+		|  is 
+		strong 14px
+		| , with a 
+		code line-height
+		|  of 
+		strong 1.428
+		| . This is applied to the 
+		code <body>
+		|  and all paragraphs. In addition, 
+		code <p>
+		|  (paragraphs) receive a bottom margin of half their computed line-height (10px by default).
+	.bs-example(data-example-id='body-copy')
+		p
+			| Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+		p
+			| Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.
+		p
+			| Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+	| {% highlight html %}
+	p ...
+	| {% endhighlight %}
+	// Body copy .lead
+	h3 Lead body copy
+	p
+		| Make a paragraph stand out by adding 
+		code .lead
+		| .
+	.bs-example(data-example-id='lead-copy')
+		p.lead
+			| Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+	| {% highlight html %}
+	p.lead ...
+	| {% endhighlight %}
+	// Using Less
+	h3 Built with Less
+	p
+		| The typographic scale is based on two Less variables in 
+		strong variables.less
+		| : 
+		code @font-size-base
+		|  and 
+		code @line-height-base
+		| . The first is the base font-size used throughout and the second is the base line-height. We use those variables and some simple math to create the margins, paddings, and line-heights of all our type and more. Customize them and Bootstrap adapts.
+	// Inline text elements
+	h2#type-inline-text Inline text elements
+	h3 Marked text
+	p
+		| For highlighting a run of text due to its relevance in another context, use the 
+		code <mark>
+		|  tag.
+	.bs-example(data-example-id='simple-mark')
+		p
+			| You can use the mark tag to 
+			mark highlight
+			|  text.
+	| {% highlight html %}
+	| You can use the mark tag to 
+	mark highlight
+	|  text.
+	| {% endhighlight %}
+	h3 Deleted text
+	p
+		| For indicating blocks of text that have been deleted use the 
+		code <del>
+		|  tag.
+	.bs-example(data-example-id='simple-del')
+		p
+			del This line of text is meant to be treated as deleted text.
+	| {% highlight html %}
+	del This line of text is meant to be treated as deleted text.
+	| {% endhighlight %}
+	h3 Strikethrough text
+	p
+		| For indicating blocks of text that are no longer relevant use the 
+		code <s>
+		|  tag.
+	.bs-example(data-example-id='simple-s')
+		p
+			s This line of text is meant to be treated as no longer accurate.
+	| {% highlight html %}
+	s This line of text is meant to be treated as no longer accurate.
+	| {% endhighlight %}
+	h3 Inserted text
+	p
+		| For indicating additions to the document use the 
+		code <ins>
+		|  tag.
+	.bs-example(data-example-id='simple-ins')
+		p
+			ins This line of text is meant to be treated as an addition to the document.
+	| {% highlight html %}
+	ins This line of text is meant to be treated as an addition to the document.
+	| {% endhighlight %}
+	h3 Underlined text
+	p
+		| To underline text use the 
+		code <u>
+		|  tag.
+	.bs-example(data-example-id='simple-u')
+		p
+			u This line of text will render as underlined
+	| {% highlight html %}
+	u This line of text will render as underlined
+	| {% endhighlight %}
+	p Make use of HTML's default emphasis tags with lightweight styles.
+	h3 Small text
+	p
+		| For de-emphasizing inline or blocks of text, use the 
+		code <small>
+		|  tag to set text at 85% the size of the parent. Heading elements receive their own 
+		code font-size
+		|  for nested 
+		code <small>
+		|  elements.
+	p
+		| You may alternatively use an inline element with 
+		code .small
+		|  in place of any 
+		code <small>
+		| .
+	.bs-example(data-example-id='simple-small')
+		p
+			small This line of text is meant to be treated as fine print.
+	| {% highlight html %}
+	small This line of text is meant to be treated as fine print.
+	| {% endhighlight %}
+	h3 Bold
+	p For emphasizing a snippet of text with a heavier font-weight.
+	.bs-example(data-example-id='simple-strong')
+		p
+			| The following snippet of text is 
+			strong rendered as bold text
+			| .
+	| {% highlight html %}
+	strong rendered as bold text
+	| {% endhighlight %}
+	h3 Italics
+	p For emphasizing a snippet of text with italics.
+	.bs-example(data-example-id='simple-em')
+		p
+			| The following snippet of text is 
+			em rendered as italicized text
+			| .
+	| {% highlight html %}
+	em rendered as italicized text
+	| {% endhighlight %}
+	#callout-type-b-i-elems.bs-callout.bs-callout-info
+		h4 Alternate elements
+		p
+			| Feel free to use 
+			code <b>
+			|  and 
+			code <i>
+			|  in HTML5. 
+			code <b>
+			|  is meant to highlight words or phrases without conveying additional importance while 
+			code <i>
+			|  is mostly for voice, technical terms, etc.
+	h2#type-alignment Alignment classes
+	p Easily realign text to components with text alignment classes.
+	.bs-example(data-example-id='text-alignment')
+		p.text-left Left aligned text.
+		p.text-center Center aligned text.
+		p.text-right Right aligned text.
+		p.text-justify Justified text.
+		p.text-nowrap No wrap text.
+	| {% highlight html %}
+	p.text-left Left aligned text.
+	p.text-center Center aligned text.
+	p.text-right Right aligned text.
+	p.text-justify Justified text.
+	p.text-nowrap No wrap text.
+	| {% endhighlight %}
+	h2#type-transformation Transformation classes
+	p Transform text in components with text capitalization classes.
+	.bs-example(data-example-id='text-capitalization')
+		p.text-lowercase Lowercased text.
+		p.text-uppercase Uppercased text.
+		p.text-capitalize Capitalized text.
+	| {% highlight html %}
+	p.text-lowercase Lowercased text.
+	p.text-uppercase Uppercased text.
+	p.text-capitalize Capitalized text.
+	| {% endhighlight %}
+	// Abbreviations
+	h2#type-abbreviations Abbreviations
+	p
+		| Stylized implementation of HTML's 
+		code <abbr>
+		|  element for abbreviations and acronyms to show the expanded version on hover. Abbreviations with a 
+		code title
+		|  attribute have a light dotted bottom border and a help cursor on hover, providing additional context on hover and to users of assistive technologies.
+	h3 Basic abbreviation
+	.bs-example(data-example-id='simple-abbr')
+		p
+			| An abbreviation of the word attribute is 
+			abbr(title='attribute') attr
+			| .
+	| {% highlight html %}
+	abbr(title='attribute') attr
+	| {% endhighlight %}
+	h3 Initialism
+	p
+		| Add 
+		code .initialism
+		|  to an abbreviation for a slightly smaller font-size.
+	.bs-example(data-example-id='simple-initialism')
+		p
+			abbr.initialism(title='HyperText Markup Language') HTML
+			|  is the best thing since sliced bread.
+	| {% highlight html %}
+	abbr.initialism(title='HyperText Markup Language') HTML
+	| {% endhighlight %}
+	// Addresses
+	h2#type-addresses Addresses
+	p
+		| Present contact information for the nearest ancestor or the entire body of work. Preserve formatting by ending all lines with 
+		code <br>
+		| .
+	.bs-example(data-example-id='simple-address')
+		address
+			strong Twitter, Inc.
+			br
+			| 			1355 Market Street, Suite 900
+			br
+			| 			San Francisco, CA 94103
+			br
+			abbr(title='Phone') P:
+			|  (123) 456-7890
+		address
+			strong Full Name
+			br
+			a(href='mailto:#') first.last@example.com
+	| {% highlight html %}
+	address
+		strong Twitter, Inc.
+		br
+		| 	1355 Market Street, Suite 900
+		br
+		| 	San Francisco, CA 94103
+		br
+		abbr(title='Phone') P:
+		|  (123) 456-7890
+	address
+		strong Full Name
+		br
+		a(href='mailto:#') first.last@example.com
+	| {% endhighlight %}
+	// Blockquotes
+	h2#type-blockquotes Blockquotes
+	p For quoting blocks of content from another source within your document.
+	h3 Default blockquote
+	p
+		| Wrap 
+		code <blockquote>
+		|  around any 
+		abbr(title='HyperText Markup Language') HTML
+		|  as the quote. For straight quotes, we recommend a 
+		code <p>
+		| .
+	.bs-example(data-example-id='simple-blockquote')
+		blockquote
+			p
+				| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+	| {% highlight html %}
+	blockquote
+		p
+			| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+	| {% endhighlight %}
+	h3 Blockquote options
+	p
+		| Style and content changes for simple variations on a standard 
+		code <blockquote>
+		| .
+	h4 Naming a source
+	p
+		| Add a 
+		code <footer>
+		|  for identifying the source. Wrap the name of the source work in 
+		code <cite>
+		| .
+	.bs-example(data-example-id='blockquote-cite')
+		blockquote
+			p
+				| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+			footer
+				| Someone famous in 
+				cite(title='Source Title') Source Title
+	| {% highlight html %}
+	blockquote
+		p
+			| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+		footer
+			| Someone famous in 
+			cite(title='Source Title') Source Title
+	| {% endhighlight %}
+	h4 Alternate displays
+	p
+		| Add 
+		code .blockquote-reverse
+		|  for a blockquote with right-aligned content.
+	.bs-example(style='overflow: hidden;', data-example-id='blockquote-reverse')
+		blockquote.blockquote-reverse
+			p
+				| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+			footer
+				| Someone famous in 
+				cite(title='Source Title') Source Title
+	| {% highlight html %}
+	blockquote.blockquote-reverse
+		| ...
+	| {% endhighlight %}
+	// Lists
+	h2#type-lists Lists
+	h3 Unordered
+	p
+		| A list of items in which the order does 
+		em not
+		|  explicitly matter.
+	.bs-example(data-example-id='simple-ul')
+		ul
+			li Lorem ipsum dolor sit amet
+			li Consectetur adipiscing elit
+			li Integer molestie lorem at massa
+			li Facilisis in pretium nisl aliquet
+			li
+				| Nulla volutpat aliquam velit
+				ul
+					li Phasellus iaculis neque
+					li Purus sodales ultricies
+					li Vestibulum laoreet porttitor sem
+					li Ac tristique libero volutpat at
+			li Faucibus porta lacus fringilla vel
+			li Aenean sit amet erat nunc
+			li Eget porttitor lorem
+	| {% highlight html %}
+	ul
+		li ...
+	| {% endhighlight %}
+	h3 Ordered
+	p
+		| A list of items in which the order 
+		em does
+		|  explicitly matter.
+	.bs-example(data-example-id='simple-ol')
+		ol
+			li Lorem ipsum dolor sit amet
+			li Consectetur adipiscing elit
+			li Integer molestie lorem at massa
+			li Facilisis in pretium nisl aliquet
+			li Nulla volutpat aliquam velit
+			li Faucibus porta lacus fringilla vel
+			li Aenean sit amet erat nunc
+			li Eget porttitor lorem
+	| {% highlight html %}
+	ol
+		li ...
+	| {% endhighlight %}
+	h3 Unstyled
+	p
+		| Remove the default 
+		code list-style
+		|  and left margin on list items (immediate children only). 
+		strong This only applies to immediate children list items
+		| , meaning you will need to add the class for any nested lists as well.
+	.bs-example(data-example-id='unstyled-list')
+		ul.list-unstyled
+			li Lorem ipsum dolor sit amet
+			li Consectetur adipiscing elit
+			li Integer molestie lorem at massa
+			li Facilisis in pretium nisl aliquet
+			li
+				| Nulla volutpat aliquam velit
+				ul
+					li Phasellus iaculis neque
+					li Purus sodales ultricies
+					li Vestibulum laoreet porttitor sem
+					li Ac tristique libero volutpat at
+			li Faucibus porta lacus fringilla vel
+			li Aenean sit amet erat nunc
+			li Eget porttitor lorem
+	| {% highlight html %}
+	ul.list-unstyled
+		li ...
+	| {% endhighlight %}
+	h3 Inline
+	p
+		| Place all list items on a single line with 
+		code display: inline-block;
+		|  and some light padding.
+	.bs-example(data-example-id='list-inline')
+		ul.list-inline
+			li Lorem ipsum
+			li Phasellus iaculis
+			li Nulla volutpat
+	| {% highlight html %}
+	ul.list-inline
+		li ...
+	| {% endhighlight %}
+	h3 Description
+	p A list of terms with their associated descriptions.
+	.bs-example(data-example-id='simple-dl')
+		dl
+			dt Description lists
+			dd A description list is perfect for defining terms.
+			dt Euismod
+			dd Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
+			dd Donec id elit non mi porta gravida at eget metus.
+			dt Malesuada porta
+			dd Etiam porta sem malesuada magna mollis euismod.
+	| {% highlight html %}
+	dl
+		dt ...
+		dd ...
+	| {% endhighlight %}
+	h4 Horizontal description
+	p
+		| Make terms and descriptions in 
+		code <dl>
+		|  line up side-by-side. Starts off stacked like default 
+		code <dl>
+		| s, but when the navbar expands, so do these.
+	.bs-example(data-example-id='horizontal-dl')
+		dl.dl-horizontal
+			dt Description lists
+			dd A description list is perfect for defining terms.
+			dt Euismod
+			dd Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
+			dd Donec id elit non mi porta gravida at eget metus.
+			dt Malesuada porta
+			dd Etiam porta sem malesuada magna mollis euismod.
+			dt Felis euismod semper eget lacinia
+			dd
+				| Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+	| {% highlight html %}
+	dl.dl-horizontal
+		dt ...
+		dd ...
+	| {% endhighlight %}
+	#callout-type-dl-truncate.bs-callout.bs-callout-info
+		h4 Auto-truncating
+		p
+			| Horizontal description lists will truncate terms that are too long to fit in the left column with 
+			code text-overflow
+			| . In narrower viewports, they will change to the default stacked layout.

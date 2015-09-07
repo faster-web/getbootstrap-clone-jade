@@ -1,0 +1,48 @@
+doctype html
+html(lang='en')
+	head
+		// Meta, title, CSS, favicons, etc.
+		| {% include header.html %}
+	body
+		a#skippy.sr-only.sr-only-focusable(href='#content')
+			.container
+				span.skiplink-text Skip to main content
+		// Docs master nav
+		| {% include nav/main.html %}
+		// Docs page layout
+		#content.bs-docs-header(tabindex='-1')
+			.container
+				h1 {{ page.title }}
+				p {{ page.lead }}
+				| {% include ads.html %}
+		.container.bs-docs-container
+			.row
+				div(class="col-md-{% if page.fullwidth == true %}12{% else %}9{% endif %}" role='main')
+					| {{ content }}
+				| {% unless page.fullwidth == true %}
+				.col-md-3(role='complementary')
+					nav.bs-docs-sidebar.hidden-print.hidden-xs.hidden-sm
+						ul.nav.bs-docs-sidenav
+							| {% if page.slug == "getting-started" %}
+							| {% include nav/getting-started.html %}
+							| {% elsif page.slug == "css" %}
+							| {% include nav/css.html %}
+							| {% elsif page.slug == "components" %}
+							| {% include nav/components.html %}
+							| {% elsif page.slug == "js" %}
+							| {% include nav/javascript.html %}
+							| {% elsif page.slug == "customize" %}
+							| {% include nav/customize.html %}
+							| {% elsif page.slug == "about" %}
+							| {% include nav/about.html %}
+							| {% elsif page.slug == "migration" %}
+							| {% include nav/migration.html %}
+							| {% endif %}
+						a.back-to-top(href='#top')
+							| Back to top
+						| {% if page.slug == "css" or page.slug == "components" or page.slug == "js" %}
+						a.bs-docs-theme-toggle(href='#', role='button')
+							| Preview theme
+						| {% endif %}
+				| {% endunless %}
+		| {% include footer.html %}
