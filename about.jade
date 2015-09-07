@@ -1,0 +1,138 @@
+| ---
+| layout: default
+| title: About
+| slug: about
+| lead: "Learn about the project's history, meet the maintaining teams, and find out how to use the Bootstrap brand."
+| ---
+// History
+.bs-docs-section
+	h1#history.page-header History
+	p.lead
+		| Originally created by a designer and a developer at Twitter, Bootstrap has become one of the most popular front-end frameworks and open source projects in the world.
+	p
+		| Bootstrap was created at Twitter in mid-2010 by 
+		a(href='https://twitter.com/mdo') @mdo
+		|  and 
+		a(href='https://twitter.com/fat') @fat
+		| . Prior to being an open-sourced framework, Bootstrap was known as 
+		em Twitter Blueprint
+		| . A few months into development, Twitter held its 
+		a(href='https://blog.twitter.com/2010/hack-week') first Hack Week
+		|  and the project exploded as developers of all skill levels jumped in without any external guidance. It served as the style guide for internal tools development at the company for over a year before its public release, and continues to do so today.
+	p
+		| Originally 
+		a(href='https://blog.twitter.com/2011/bootstrap-twitter') released
+		|  on 
+		a(href='https://twitter.com/mdo/statuses/104620039650557952')
+			time(datetime='2011-08-19 11:25') Friday, August 19, 2011
+		| , we've since had over 
+		a(href='https://github.com/twbs/bootstrap/releases') twenty releases
+		| , including two major rewrites with v2 and v3. With Bootstrap 2, we added responsive functionality to the entire framework as an optional stylesheet. Building on that with Bootstrap 3, we rewrote the library once more to make it responsive by default with a mobile first approach.
+// Team
+.bs-docs-section
+	h1#team.page-header Team
+	p.lead
+		| Bootstrap is maintained by the founding team and a small group of invaluable core contributors, with the massive support and involvement of our community.
+	h2#team-core Core team
+	.list-group.bs-team
+		| {% for member in site.data.core-team %}
+		.list-group-item
+			iframe.github-btn(src='https://ghbtns.com/github-btn.html?user={{ member.user }}&type=follow')
+			a.team-member(href='https://github.com/{{ member.user }}')
+				img(src='https://secure.gravatar.com/avatar/{{ member.gravatar }}.jpg?s=32', alt='@{{ member.user }} avatar', width='32', height='32')
+				strong {{ member.name }}
+				small @{{ member.user }}
+		|     {% endfor %}
+	p
+		| Get involved with Bootstrap development by 
+		a(href='https://github.com/twbs/bootstrap/issues/new') opening an issue
+		|  or submitting a pull request. Read our 
+		a(href='https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md') contributing guidelines
+		|  for information on how we develop.
+	h2#team-sass Sass team
+	.list-group.bs-team
+		| {% for member in site.data.sass-team %}
+		.list-group-item
+			iframe.github-btn(src='https://ghbtns.com/github-btn.html?user={{ member.user }}&type=follow')
+			a.team-member(href='https://github.com/{{ member.user }}')
+				img(src='https://secure.gravatar.com/avatar/{{ member.gravatar }}.jpg?s=32', alt='@{{ member.user }} avatar', width='32', height='32')
+				strong {{ member.name }}
+				small @{{ member.user }}
+		|     {% endfor %}
+	p
+		| The 
+		a(href='{{ site.sass_repo }}') official Sass port of Bootstrap
+		|  was created and is maintained by this team. It became part of Bootstrap's organization with v3.1.0. Read the Sass 
+		a(href='https://github.com/twbs/bootstrap-sass/blob/master/CONTRIBUTING.md') contributing guidelines
+		|  for information on how the Sass port is developed.
+// Brand
+.bs-docs-section
+	h1#brand.page-header Brand guidelines
+	p.lead
+		| Have a need for Bootstrap's brand resources? Great! We have only a few guidelines we follow, and in turn ask you to follow as well. These guidelines were inspired by MailChimp's 
+		a(href='http://mailchimp.com/about/brand-assets/', target='_blank') Brand Assets
+		| .
+	h2 Mark and logo
+	p
+		| Use either the Bootstrap mark (a capital 
+		strong B
+		| ) or the standard logo (just 
+		strong Bootstrap
+		| ). It should always appear in Helvetica Neue Bold. 
+		strong Do not use the Twitter bird
+		|  in association with Bootstrap.
+	.bs-brand-logos
+		.bs-brand-item
+			.bs-docs-booticon.bs-docs-booticon-lg B
+		.bs-brand-item.inverse
+			.bs-docs-booticon.bs-docs-booticon-lg.bs-docs-booticon-inverse B
+	.bs-brand-logos
+		.bs-brand-item
+			h1 Bootstrap
+		.bs-brand-item.inverse
+			h1 Bootstrap
+	h2 Download mark
+	p
+		| Download the Bootstrap mark in one of three styles, each available as an SVG file. Right click, Save as.
+	.bs-brand-logos
+		.bs-brand-item
+			img.svg(src='../assets/brand/bootstrap-solid.svg', alt='Bootstrap', width='144', height='144')
+		.bs-brand-item.inverse
+			img.svg(src='../assets/brand/bootstrap-outline.svg', alt='Bootstrap', width='144', height='144')
+		.bs-brand-item.inverse
+			img.svg(src='../assets/brand/bootstrap-punchout.svg', alt='Bootstrap', width='144', height='144')
+	h2 Name
+	p
+		| The project and framework should always be referred to as 
+		strong Bootstrap
+		| . No Twitter before it, no capital 
+		em s
+		| , and no abbreviations except for one, a capital 
+		strong B
+		| .
+	.bs-brand-logos
+		.bs-brand-item
+			h3 Bootstrap
+			span.glyphicon.glyphicon-ok(aria-hidden='true')
+			span.sr-only (correct)
+		.bs-brand-item
+			h3.text-muted BootStrap
+			span.glyphicon.glyphicon-remove(aria-hidden='true')
+			span.sr-only (incorrect)
+		.bs-brand-item
+			h3.text-muted Twitter Bootstrap
+			span.glyphicon.glyphicon-remove(aria-hidden='true')
+			span.sr-only (incorrect)
+	h2 Colors
+	p
+		| Our docs and branding use a handful of primary colors to differentiate what 
+		em is
+		|  Bootstrap from what 
+		em is in
+		|  Bootstrap. In other words, if it's purple, it's representative of Bootstrap.
+	.bs-brand
+		.color-swatches
+			.color-swatch.bs-purple
+			.color-swatch.bs-purple-light
+			.color-swatch.bs-purple-lighter
+			.color-swatch.bs-gray
